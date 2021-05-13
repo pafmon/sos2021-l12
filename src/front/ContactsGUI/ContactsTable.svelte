@@ -13,7 +13,7 @@
         phone: ""
     }
 
-    const BASE_CONTACT_API_PATH = "http://localhost:10000/api/v1";
+    const BASE_CONTACT_API_PATH = "/api/v1";
 
     async function getContacts(){
         console.log("Fetching contacts...");

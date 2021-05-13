@@ -1,3 +1,5 @@
+const request =  require("request");
+
 var BASE_CONTACT_API_PATH = "/api/v1";
 
 var contacts = [
@@ -72,5 +74,22 @@ module.exports = (app) => {
         res.sendStatus(200);
      });
 
+
+
+     app.use("/proxyHeroku", function(req, res) {
+        console.log(`New Proxy Call!`);
+
+        var apiServerHost = 'https://sos2021-l12.herokuapp.com';
+        console.log(`apiServerHost = <${apiServerHost}>`);
+        console.log(`baseURL = <${req.baseUrl}>`);
+        console.log(`url = <${req.url}>`);
+       
+        var url = apiServerHost + req.url;
+
+        console.log(`piped: ${req.baseUrl}${req.url} -> ${url}`);
+
+        req.pipe(request(url)).pipe(res);
+      });
+      
 
  };
