@@ -71,9 +71,9 @@
         </thead>
         <tbody>
             <tr>
-                <td><input bind:value="{newContact.name}"></td>
-                <td><input bind:value="{newContact.phone}"></td>
-                <td><Button on:click={insertContact}>Insert</Button></td>
+                <td><input id="name" bind:value="{newContact.name}"></td>
+                <td><input id="phone" bind:value="{newContact.phone}"></td>
+                <td><Button id="addContact" on:click={insertContact}>Insert</Button></td>
             </tr>
             {#each contacts as contact}
                 <tr>

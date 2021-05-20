@@ -1,5 +1,5 @@
 {
-  "name": "sos2021-l09",
+  "name": "sos2021-l13",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -25,6 +25,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "puppeteer": "^9.1.1",
     "request": "^2.88.2",
     "svelte-spa-router": "^3.1.0",
     "sveltestrap": "^3.14.1"
