@@ -28,7 +28,7 @@ const puppeteer = require('puppeteer');
     
     console.log(`Initial row count = ${initialRowCount}`);
 
-    if(initialRowCount != 2){
+    if(initialRowCount != 3){
         console.error("Inital row count is not 3");
         process.exit(1);
     }
